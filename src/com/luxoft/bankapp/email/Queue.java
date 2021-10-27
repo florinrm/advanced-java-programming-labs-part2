@@ -19,5 +19,4 @@ public class Queue implements Serializable {
         
         return null;
     }
-    
 }

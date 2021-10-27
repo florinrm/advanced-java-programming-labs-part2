@@ -23,4 +23,8 @@ public enum Gender {
         }
         return null;
     }
+
+    public String getStringLine() {
+        return stringLine;
+    }
 }

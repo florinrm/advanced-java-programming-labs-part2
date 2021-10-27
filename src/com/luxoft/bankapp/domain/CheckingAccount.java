@@ -8,7 +8,7 @@ import com.luxoft.bankapp.exceptions.OverdraftLimitExceededException;
 import com.luxoft.bankapp.utils.Params;
 
 public class CheckingAccount extends AbstractAccount {
-	public double overdraft;
+	private double overdraft;
 	private Currency currency;
 
 	public CheckingAccount(int id, double amount, double overdraft) {

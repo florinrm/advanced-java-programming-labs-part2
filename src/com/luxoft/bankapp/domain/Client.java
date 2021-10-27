@@ -91,12 +91,9 @@ public class Client implements Serializable {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(getClientGreeting())
-		  .append("\n")
-		  .append("City: " + getCity())
-		  .append("\n")
-		  .append("phoneAreaCode: " + getPhoneAreaCode())
-		  .append("\n")
-		  .append("phoneNumber: " + getPhoneNumber())
+				.append("\n").append("City: ").append(getCity())
+				.append("\n").append("phoneAreaCode: ").append(getPhoneAreaCode())
+				.append("\n").append("phoneNumber: ").append(getPhoneNumber())
 		  .append("\n");
 		
 		for (Account account : getAccounts()) {
