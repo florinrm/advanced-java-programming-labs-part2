@@ -1,15 +1,13 @@
 package com.luxoft.bankapp.tests;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
 import com.luxoft.bankapp.domain.CheckingAccount;
 import com.luxoft.bankapp.domain.SavingAccount;
 import com.luxoft.bankapp.exceptions.NotEnoughFundsException;
+
+import static org.junit.Assert.*;
 
 public class Test4 {
 	SavingAccount savingAccount1;
@@ -29,19 +27,19 @@ public class Test4 {
 	
 	@Test
 	public void testEqualAccounts() throws NotEnoughFundsException {
-		assertTrue(savingAccount1.equals(savingAccount2));
-		assertFalse(savingAccount1 == savingAccount2);
-		
-		assertTrue(checkingAccount1.equals(checkingAccount2));
-		assertFalse(checkingAccount1 == checkingAccount2);
+		assertEquals(savingAccount1, savingAccount2);
+		assertNotSame(savingAccount1, savingAccount2);
+
+		assertEquals(checkingAccount1, checkingAccount2);
+		assertNotSame(checkingAccount1, checkingAccount2);
 		
 		SavingAccount savingAccount3 = new SavingAccount(3, 1140.25);
-		assertFalse(savingAccount1.equals(savingAccount3));
-		assertFalse(savingAccount1 == savingAccount3);
+		assertNotEquals(savingAccount1, savingAccount3);
+		assertNotSame(savingAccount1, savingAccount3);
 		
 		CheckingAccount checkingAccount4 = new CheckingAccount(4, 1120.75, 100.0);
-		assertFalse(checkingAccount1.equals(checkingAccount4));
-		assertFalse(checkingAccount1 == checkingAccount4);
+		assertNotEquals(checkingAccount1, checkingAccount4);
+		assertNotSame(checkingAccount1, checkingAccount4);
 	}
 	
 	@Test
